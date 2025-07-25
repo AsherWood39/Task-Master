@@ -1,5 +1,5 @@
-import { MuthootIcon } from "./icons/muthoot";
-import { useSidebarStore } from "./store/sidebar";
+import { MuthootIcon } from "../icons/muthoot";
+import { useSidebarStore } from "../store/sidebar";
 
 export function Sidebar() {
   return (
@@ -7,7 +7,7 @@ export function Sidebar() {
       <div className="p-4">
         <MuthootIcon />
       </div>
-      <div className=" h-full py-20 px-10">
+      <div className="flex flex-col w-fit h-full py-20 px-10">
         <LabelSidebar name="Home" />
         <LabelSidebar name="Task" />
         <LabelSidebar name="Inbox" />
@@ -31,11 +31,16 @@ function LabelSidebar({ name }) {
           setState(name);
           window.scrollTo(0, 0);
         }}
-        className={`font-rubik p-2 hover:cursor-pointer hover:text-danger ${
-          state === name ? "font-bold" : ""
-        }`}>
-        {state === name ? "— " : ""}
-        {name}
+        className="relative inline-block w-fit font-rubik m-2 hover:cursor-pointer hover:text-danger hover:text-shadow-xl  transition-all duration-200 group">
+        <span className={state === name ? "font-bold" : ""}>
+          {state === name ? "— " : ""}
+          {name}
+        </span>
+
+        {/* Underline */}
+        {state !== name && (
+          <span className="absolute -bottom-[1px] left-0 h-[2px] bg-danger w-0 group-hover:w-full transition-all duration-300"></span>
+        )}
       </div>
     </>
   );
