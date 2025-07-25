@@ -1,1 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #F8F8FB;
+  --color-background: #ffffff;
+  --color-secondary: #d5d5d5;
+  --color-card: #e0e4ea;
+  --color-foreground: #000000;
+  --color-text: #333333;
+  --color-text-secondary: #666666;
+  --color-text-tertiary: #999999;
+
+  --color-success: #67cb65;
+  --color-warn: #ff9533;
+  --color-danger: #e74444;
+  --font-rubik: "Rubik", sans-serif;
+}

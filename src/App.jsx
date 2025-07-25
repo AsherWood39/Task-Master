@@ -1,9 +1,10 @@
-import "./App.css";
+import './App.css'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import UserAuth from "./pages/user/user-auth";
 import UserHome from "./pages/user/user-home";
 import ManagerAuth from "./pages/manager/manager-auth";
 import ManagerHome from "./pages/manager/manager-home";
+
 
 function App() {
   return (
