@@ -2,7 +2,7 @@ import ProgressBar from "../progressbar";
 
 export function TaskCard({ task }) {
   return (
-    <div className="bg-card p-5 rounded-xl shadow-lg shadow-secondary w-72 h-72  hover:-translate-0.5 hover:shadow-xl transition-all duration-300">
+    <div className="bg-card p-5 rounded-xl shadow-lg shadow-secondary w-80 h-80  hover:-translate-0.5 hover:shadow-xl transition-all duration-300">
       {/* title */}
       <div className="bg-ctitle rounded-xl py-3 px-5 ">
         <div className="flex justify-between  h-full items-center">
