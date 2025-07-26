@@ -2,9 +2,9 @@ import ProgressBar from "../progressbar";
 
 export function TaskCard({ task }) {
   return (
-    <div className="bg-card p-5 rounded-xl shadow-lg shadow-secondary w-72 h-72  ">
+    <div className="bg-card p-5 rounded-xl shadow-lg shadow-secondary w-72 h-72  hover:-translate-0.5 hover:shadow-xl transition-all duration-300">
       {/* title */}
-      <div className="bg-ctitle rounded-xl py-3 px-5">
+      <div className="bg-ctitle rounded-xl py-3 px-5 ">
         <div className="flex justify-between  h-full items-center">
           <h2 className="font-bold mb-2 text-sm h-fit">{task.title}</h2>
           <h2
@@ -24,7 +24,7 @@ export function TaskCard({ task }) {
       <ProgressBar progress={75} />
 
       {/* description */}
-      <div>
+      <div className="mt-3">
         <p className="text-xs font-bold mb-2">Description</p>
         <p className="text-xs text-gray-600 mb-2">{task.description}</p>
       </div>
