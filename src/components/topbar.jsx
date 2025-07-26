@@ -1,6 +1,6 @@
 import { ProfileIcon } from "../icons/profile";
 import { SearchIcon } from "../icons/search";
-import { ProfileCard } from "./profile-card";
+import { ProfileCard } from "./cards/profile-card";
 
 export function Topbar() {
   return (

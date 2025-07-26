@@ -1,5 +1,5 @@
-import { ProfileIcon } from "../icons/profile";
-import { UnderlineAnimated } from "./underline-animated";
+import { ProfileIcon } from "../../icons/profile";
+import { UnderlineAnimated } from "../underline-animated";
 export function ProfileCard() {
   // This component can be expanded to include more user details or actions
   // For now, it just displays a profile icon and a placeholder name

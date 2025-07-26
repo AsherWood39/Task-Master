@@ -1,10 +1,14 @@
+import { useEffect } from "react";
+import { TaskView } from "../../components/views/task-view";
 import Layout from "../../layout";
+import { useSidebarStore } from "../../store/sidebar";
 
 export default function UserHome() {
+  const state = useSidebarStore((state) => state.state);
+
   return (
-   <Layout>
-      <h1>Welcome to Your Home Page</h1>
-      <p>This is where you can manage your account settings and preferences.</p>
-   </Layout>
+    <Layout>
+      {state == "Task" && <TaskView />}
+    </Layout>
   );
 }
