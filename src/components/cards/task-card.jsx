@@ -1,6 +1,7 @@
+import { memo } from "react";
 import ProgressBar from "../progressbar";
 
-export function TaskCard({ task }) {
+export const TaskCard = memo( function  TaskCard({ task }) {
   return (
     <div className="bg-card p-5 rounded-xl shadow-lg shadow-secondary w-80 h-80  hover:-translate-0.5 hover:shadow-xl transition-all duration-300">
       {/* title */}
@@ -30,4 +31,4 @@ export function TaskCard({ task }) {
       </div>
     </div>
   );
-}
+})

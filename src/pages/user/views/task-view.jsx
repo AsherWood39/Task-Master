@@ -1,9 +1,9 @@
-import { TaskCard } from "../cards/task-card";
+import { memo } from "react";
+import { TaskCard } from "../../../components/cards/task-card";
 
-export function TaskView() {
+export const TaskView = memo(function TaskView() {
   return (
     <div className= "fixed p-10 h-full flex flex-wrap gap-10 overflow-scroll  justify-center-safe">
-    
       <TaskCard
         task={{
           title: "Complete Project Report by tommarow",
@@ -86,4 +86,4 @@ export function TaskView() {
       />
     </div>
   );
-}
+});

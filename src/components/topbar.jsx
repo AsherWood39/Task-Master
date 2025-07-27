@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { ProfileIcon } from "../icons/profile";
 import { SearchIcon } from "../icons/search";
 import { ProfileCard } from "./cards/profile-card";
 
-export function Topbar() {
+export const Topbar = memo(function Topbar() {
   return (
     <div className="flex gap-5 justify-center items-center py-10 px-5 drop-shadow-xl h-15  bg-white shadow-secondary w-full mb-3">
       <div className="rounded-full w-full flex border border-secondary">
@@ -21,5 +22,4 @@ export function Topbar() {
       
     </div>
   );
-}
-``;
+});

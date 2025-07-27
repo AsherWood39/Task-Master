@@ -1,5 +1,6 @@
-import { Sidebar } from "./components/sidbar";
-import { Topbar } from "./components/topbar";
+
+import { Sidebar } from "../../components/sidebar/sidbar";
+import { Topbar } from "../../components/topbar";
 
 export default function Layout({ children }) {
   return (
@@ -7,12 +8,11 @@ export default function Layout({ children }) {
       <Sidebar />
       <div className="flex flex-col w-full">
         <div>
-            <Topbar />
+          <Topbar />
         </div>
-        <div className=" p-5  drop-shadow-xl  bg-white h-full">
-          {children}
-        </div>
+        <div className=" p-5  drop-shadow-xl  bg-white h-full">{children}</div>
       </div>
     </div>
   );
-}
+};
+

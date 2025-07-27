@@ -1,5 +1,5 @@
-import React from 'react';
-export function MuthootIcon() {
+import { memo } from "react";
+export const MuthootIcon = memo( function MuthootIcon() {
   return (
     <svg
       width="200"
@@ -54,3 +54,4 @@ export function MuthootIcon() {
     </svg>
   );
 }
+)
