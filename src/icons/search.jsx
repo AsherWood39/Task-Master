@@ -1,6 +1,6 @@
 export const SearchIcon = function SearchIcon() {
   return (
-    <div className="flex items-center text-primary-900 justify-center w-10 h-10 rounded-full">
+    <div className="flex items-center text-ctitle justify-center w-10 h-10 rounded-full">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
