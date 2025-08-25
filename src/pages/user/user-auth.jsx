@@ -1,12 +1,11 @@
-import Layout from "./layout";
+import { MuthootIcon } from "../../icons/muthoot";
+import Auth from "../auth";
 
 export default function UserAuth() {
-  return (
-    <Layout>
-      <div>
-        <h1>User Authentication</h1>
-        <p>Please log in to access your account.</p>
-      </div>
-    </Layout>
-  );
+	return (
+		<div className=" fixed h-screen w-screen flex flex-col justify-center items-center ">
+			
+			<Auth role="User" />
+		</div>
+	);
 }

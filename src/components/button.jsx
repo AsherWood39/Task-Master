@@ -4,11 +4,11 @@ const variants = {
   danger: "bg-danger text-white hover:bg-red-600",
   link: "bg-transparent  hover:underline border border-blue-500 hover:border",
 };
-export const Button = ({ variant = "primary", children, onClick }) => {
+export const Button = ({ variant = "primary", children, onClick , className }) => {
   return (
     <button
       onClick={onClick}
-      className={`px-4 py-2 h-fit rounded-2xl transition-all duration-200 ${variants[variant]}`}>
+      className={`px-4 py-2 h-fit rounded-2xl transition-all duration-200 ${variants[variant]} ${className}`}>
       {children}
     </button>
   );
