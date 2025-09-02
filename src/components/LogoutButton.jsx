@@ -4,12 +4,9 @@ export function LogoutButton() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // 1. Clear the authentication token from local storage.
-    localStorage.removeItem("token"); 
-
-    // 2. Redirect to the login page.
-    // Replace '/user/auth' with the actual path to your login page if it's different.
-    navigate("/user/auth"); 
+    localStorage.removeItem("token");
+    // You could decode role from token here for redirecting
+    navigate("/user/auth"); // Or conditionally redirect based on role
   };
 
   return (
