@@ -5,6 +5,7 @@ import UserHome from "./pages/user/user-home";
 import ManagerHome from "./pages/manager/manager-home";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
+
 function App() {
   const token = localStorage.getItem("token");
 
