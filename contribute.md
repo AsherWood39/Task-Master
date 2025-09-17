@@ -88,7 +88,7 @@ npm run build
 
 # Check for code quality issues  
 npm run lint
-npm run lint:fix  # Auto-fixes what it can
+
 
 # Test in browser
 # - Does it work on desktop?
@@ -206,28 +206,8 @@ When you create a PR, GitHub will automatically:
 4. Once approved, merged to `develop`
 5. Later, `develop` gets merged to `master` (production)
 
-## 🛠️ Development Environment Setup
 
-### Recommended VS Code Extensions
-```json
-// In VS Code, install these extensions:
-- ES7+ React/Redux/React-Native snippets
-- Prettier - Code formatter  
-- ESLint
-- Auto Rename Tag
-- Bracket Pair Colorizer
-```
 
-### VS Code Settings (Optional)
-```json
-// .vscode/settings.json
-{
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
-}
-```
 
 ## 🎨 Project Structure
 
@@ -245,15 +225,12 @@ Task-Master/
 │   ├── utils/               # Helper functions
 │   │   ├── taskUtils.js     # Task-related utilities
 │   │   └── dateUtils.js     # Date formatting
-│   ├── styles/              # CSS files
-│   │   ├── global.css       # Global styles
-│   │   └── components/      # Component-specific styles
-│   ├── App.jsx              # Main app component
-│   └── main.jsx             # Vite entry point
+│   ├── App.css               # Global styles
+│   ├── App.jsx               # Main app component
+│   └── main.jsx              # Vite entry point
 ├── public/                  # Static assets
 │   ├── favicon.ico
 │   └── index.html
-├── dist/                    # Build output (auto-generated)
 ├── vite.config.js          # Vite configuration
 ├── package.json            # Dependencies
 └── README.md               # Project info
