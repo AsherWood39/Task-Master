@@ -3,9 +3,13 @@ import { SearchIcon } from "../icons/search";
 import { ProfileCard } from "../components/cards/profile-card";
 import { LogoutButton } from "../components/LogoutButton";
 import { NotificationIcon } from "../icons/notification";
-import { InboxIcon } from "../icons/inbox"; 
+import { InboxIcon } from "../icons/inbox";
+import { useSidebarStore } from "../store/sidebar-store";
+import { useShallow } from "zustand/shallow"; 
 
 export const Topbar = memo(function Topbar() {
+  const setCurrent = useSidebarStore(useShallow((state) => state.setCurrent));
+
   return (
     <div className="flex justify-between items-center py-4 px-6 bg-white w-full gap-12 shadow-md border-b border-gray-100">
       {/* Left side - Search bar */}
@@ -24,11 +28,13 @@ export const Topbar = memo(function Topbar() {
         </button>
 
         {/* Inbox/Message Icon */}
-        <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+        <button
+          className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+          onClick={() => setCurrent("Inbox")}
+        >
           <InboxIcon className="w-6 h-6" />
         </button>
 
-        {/* User Profile */}
         <ProfileCard />
         <LogoutButton />
       </div>
