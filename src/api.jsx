@@ -1,7 +1,7 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
 export async function loginUser(role, credentials) {
-  const url = `${API_BASE_URL}/auth/login/`;
+  const url = `${API_BASE_URL}/api/auth/login/`;
   // If you have different URLs based on role, implement here
   
   const response = await fetch(url, {
@@ -14,7 +14,7 @@ export async function loginUser(role, credentials) {
 }
 
 export async function registerUser(role, credentials) {
-  const url = `${API_BASE_URL}/auth/register/`;
+  const url = `${API_BASE_URL}/api/auth/register/`;
   // If different URLs per role, implement here
   
   const response = await fetch(url, {
