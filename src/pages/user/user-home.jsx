@@ -4,6 +4,7 @@ import { MeetingView } from "./views/meeting-view";
 import { useShallow } from "zustand/shallow";
 import Layout from "./layout";
 import CalendarView from "./views/calender-view";
+import { ProfileView } from "./views/profile-view";
 
 
 export default function UserHome() {
@@ -14,6 +15,7 @@ export default function UserHome() {
       {current == "Task" && <TaskView />}
       {current == "Meetings" && <MeetingView />}
       {current == "Calendar" && <CalendarView />}
+      {current == "Profile" && <ProfileView />}
     </Layout>
   );
 }
